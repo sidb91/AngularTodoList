@@ -1,0 +1,15 @@
+.appBody {
+    /* The image used */
+    /*background-image: url('/../assets/note_bg.png');*/
+
+    background: rgb(153,110,181);
+    background: linear-gradient(90deg, rgba(153,110,181,1) 1%, rgba(213,56,56,1) 29%, rgba(255,159,24,1) 79%);
+
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

@@ -1,0 +1,80 @@
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-10 col-md-8 col-lg-6">
+      <!-- Login form-->
+      <main class="login-form">
+        <div class="container">
+          <div class="row justify-content-center">
+            <small *ngIf="inValidLogin" class="alert alert-warning">{{
+              loginErrorMessage
+            }}</small>
+            <div class="col-md-10">
+              <div class="card">
+                <div class="card-header">LOGIN</div>
+                <div class="card-body">
+                  <form action="" method="">
+                    <div class="form-group row">
+                      <label
+                        for="username"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Username</label
+                      >
+                      <div class="col-md-8">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="username"
+                          required
+                          autofocus
+                          [(ngModel)]="username"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label
+                        for="password"
+                        class="col-md-4 col-form-label text-md-right"
+                        >Password</label
+                      >
+                      <div class="col-md-8">
+                        <input
+                          type="password"
+                          class="form-control"
+                          name="password"
+                          required
+                          [(ngModel)]="password"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- <div class="form-group row">
+                <div class="col-md-6 offset-md-4">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="remember" /> Remember Me
+                    </label>
+                  </div>
+                </div>
+              </div> -->
+
+                    <div class="col-md-6 offset-md-4">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        (click)="handleLogin()"
+                      >
+                        Login
+                      </button>
+                      <!-- <a href="#" class="btn btn-link"> Forgot Your Password? </a> -->
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
