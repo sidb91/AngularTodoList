@@ -11,9 +11,10 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ListTodosComponent } from './list-todos/list-todos.component';
 import { FooterComponent } from './footer/footer.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, ErrorComponent, TodoComponent, HeaderComponent, HomeComponent, ListTodosComponent, FooterComponent],
+  declarations: [AppComponent, LoginComponent, ErrorComponent, TodoComponent, HeaderComponent, HomeComponent, ListTodosComponent, FooterComponent, LogoutComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,6 +1,6 @@
 <!--Navigation Header-->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="/">{{ title }}</a>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand" routerLink="/home">{{ title }}</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -16,12 +16,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active" routerLinkActive="active">
-        <a routerLink="/home" class="nav-link" href="#"
+        <a *ngIf="authService.isUserLoggedIn()" routerLink="/home" class="nav-link" href="#"
           >Home <span class="sr-only">(current)</span></a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/todos">Todos</a>
+        <a *ngIf="authService.isUserLoggedIn()" class="nav-link" routerLink="/todos">Todos</a>
       </li>
       <!-- <li class="nav-item dropdown">
           <a
@@ -55,6 +55,7 @@
           aria-label="Search"
         /> -->
         <button
+          *ngIf="!authService.isUserLoggedIn()"
           routerLink="/login"
           class="btn btn-outline-success my-2 my-sm-0 m-2"
           type="submit"
@@ -62,6 +63,7 @@
           LOGIN
         </button>
         <button
+          *ngIf="authService.isUserLoggedIn()"
           routerLink="/logout"
           class="btn btn-outline-success my-2 my-sm-0 m-2"
           type="submit"

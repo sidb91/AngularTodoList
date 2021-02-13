@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title = 'TODO PLANNER BOARD';
+  //isUserLoggedIn:boolean = false;
 
-  constructor() {}
+  constructor(public authService: HardcodedAuthenticationService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    //this.isUserLoggedIn = this.authService.isUserLoggedIn();
+
+  }
+
+  logOutUser(){
+    this.authService.logoutUser();
+  }
+
+
 }

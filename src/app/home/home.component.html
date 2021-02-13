@@ -1,19 +1,19 @@
 <div class="container h-100">
   <div class="row h-100 justify-content-center align-items-center">
-    <div class="col-10 col-md-8 col-lg-6">
-      <!-- Home page-->
-      <main class="login-form">
-        <div class="container">
-          <div class="row justify-content-center">
-            <h1 class="p-3 mb-2 bg-warning text-dark">
-              Welcome to Todo Planner
-            </h1>
-            <button routerLink="/login" class="btn btn-info text-dark">
+    <!-- Home page-->
+    <div class="container homeImage">
+      <div class="row justify-content-center">
+        <h1 class="p-4 m-5 text-dark">
+          Welcome to Todo Planner
+        </h1>
+        <!-- <button routerLink="/login" class="btn btn-warning text-dark font-weight-bold">
               Login to Todo board
-            </button>
-          </div>
-        </div>
-      </main>
+            </button> -->
+      </div>
+      <div class="row justify-content-center">
+        <button class="btn btn-outline-success" 
+        (click)="displayWelcomeMsg()">Welcome Message</button>
+      </div>
     </div>
   </div>
 </div>
